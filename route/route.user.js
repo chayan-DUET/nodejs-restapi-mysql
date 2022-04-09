@@ -1,5 +1,5 @@
 const express = require('express');
-const { createUser } = require('../controller/controller.users');
+const { createUser, showUser } = require('../controller/controller.users');
 const router = express.Router();
 
 //const mysql = require("mysql");
@@ -19,6 +19,7 @@ conn.connect((err) => {
 }); */
 
 router.post("/create", createUser);
+router.get("/view", showUser);
 
 module.exports = router;
 

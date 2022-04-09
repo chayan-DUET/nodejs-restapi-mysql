@@ -26,13 +26,13 @@ conn.connect((err) => {
 app.use("/api", userRoute);
 
 // show all records
-app.get("/api/view", (req, res) => {
+/* app.get("/api/view", (req, res) => {
 	let sql = "SELECT * FROM users";
 	let query = conn.query(sql, (err, result) => {
 		if (err) throw err;
 		res.send(JSON.stringify({ status: 200, error: null, response: result }));
 	});
-});
+}); */
 
 // show a single record
 app.get("/api/view/:id", (req, res) => {

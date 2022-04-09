@@ -8,3 +8,11 @@ exports.createUser = (req, res) => {
 		res.send(JSON.stringify({ status: 200, error: null, response: "New Record is Added successfully" }));
 	});
 };
+// show all record
+exports.showUser =(req, res) => {
+	let sql = "SELECT * FROM users";
+	let query = conn.query(sql, (err, result) => {
+		if (err) throw err;
+		res.send(JSON.stringify({ status: 200, error: null, response: result }));
+	});
+}
