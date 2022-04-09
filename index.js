@@ -22,7 +22,7 @@ conn.connect((err) => {
 	console.log("MySQL is connected");
 }); */
 
-// creat a new Record
+// creat a new user Record
 app.use(userRoute);
 
 // show all records
