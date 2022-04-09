@@ -18,7 +18,7 @@ conn.connect((err) => {
 	console.log("MySQL is connected");
 }); */
 
-router.post("/api/create", createUser);
+router.post("/create", createUser);
 
 module.exports = router;
 

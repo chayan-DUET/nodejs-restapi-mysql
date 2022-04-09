@@ -23,7 +23,7 @@ conn.connect((err) => {
 }); */
 
 // creat a new user Record
-app.use(userRoute);
+app.use("/api", userRoute);
 
 // show all records
 app.get("/api/view", (req, res) => {
