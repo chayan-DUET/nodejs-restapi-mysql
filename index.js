@@ -53,13 +53,13 @@ app.use("/api", userRoute);
 }); */
 
 // update the Record
-app.put("/api/update/", (req, res) => {
+/* app.put("/api/update/", (req, res) => {
 	let sql = "UPDATE users SET name='" + req.body.name + "', location='" + req.body.location + "' WHERE id=" + req.body.id;
 	let query = conn.query(sql, (err, result) => {
 		if (err) throw err;
 		res.send(JSON.stringify({ status: 200, error: null, response: "Record updated SuccessFully" }));
 	});
-});
+}); */
 
 app.listen(8000, () => {
 	console.log("server started on port 8000...");

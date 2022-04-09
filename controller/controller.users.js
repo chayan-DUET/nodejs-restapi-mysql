@@ -34,3 +34,12 @@ exports.deleteByID = (req, res) => {
 		res.send(JSON.stringify({ status: 200, error: null, response: "Record deleted successfully" }));
 	});
 };
+
+//update the record by id
+exports.updateByID = (req, res) => {
+	let sql = "UPDATE users SET name='" + req.body.name + "', location='" + req.body.location + "' WHERE id=" + req.body.id;
+	let query = conn.query(sql, (err, result) => {
+		if (err) throw err;
+		res.send(JSON.stringify({ status: 200, error: null, response: "Record updated SuccessFully" }));
+	});
+};

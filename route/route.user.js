@@ -1,11 +1,11 @@
 const express = require('express');
 const { route } = require('express/lib/application');
-const { createUser, showUser, getByID, deleteByID } = require('../controller/controller.users');
+const { createUser, showUser, getByID, deleteByID, updateByID } = require('../controller/controller.users');
 const router = express.Router();
 
 //const mysql = require("mysql");
 //Create Database Connection
-const conn = require("../db/database.connection");
+/* const conn = require("../db/database.connection"); */
 /* const conn = mysql.createConnection({
 	host: "localhost",
 	user: "root",
@@ -23,6 +23,7 @@ router.post("/create", createUser);
 router.get("/view", showUser);
 router.get("/view/:id", getByID);
 router.delete("/delete/:id", deleteByID);
+router.put("/update/:id", updateByID);
 
 module.exports = router;
 
