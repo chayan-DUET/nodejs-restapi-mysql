@@ -35,13 +35,13 @@ app.use("/api", userRoute);
 }); */
 
 // show a single record
-app.get("/api/view/:id", (req, res) => {
+/* app.get("/api/view/:id", (req, res) => {
 	let sql = "SELECT * FROM users WHERE id=" + req.params.id;
 	let query = conn.query(sql, (err, result) => {
 		if (err) throw err;
 		res.send(JSON.stringify({ status: 200, error: null, response: result }));
 	});
-});
+}); */
 
 // delete the record
 app.delete("/api/delete/:id", (req, res) => {

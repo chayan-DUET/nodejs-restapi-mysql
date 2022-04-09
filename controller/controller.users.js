@@ -15,4 +15,13 @@ exports.showUser =(req, res) => {
 		if (err) throw err;
 		res.send(JSON.stringify({ status: 200, error: null, response: result }));
 	});
+};
+
+// show a single record
+exports.getByID = (req, res) => {
+	let sql = "SELECT * FROM users WHERE id=" + req.params.id;
+	let query = conn.query(sql, (err, result) => {
+		if (err) throw err;
+		res.send(JSON.stringify({ status: 200, error: null, response: result }));
+	});
 }
