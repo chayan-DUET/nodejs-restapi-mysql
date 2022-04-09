@@ -1,5 +1,6 @@
 const express = require('express');
-const { createUser, showUser, getByID } = require('../controller/controller.users');
+const { route } = require('express/lib/application');
+const { createUser, showUser, getByID, deleteByID } = require('../controller/controller.users');
 const router = express.Router();
 
 //const mysql = require("mysql");
@@ -21,6 +22,7 @@ conn.connect((err) => {
 router.post("/create", createUser);
 router.get("/view", showUser);
 router.get("/view/:id", getByID);
+router.delete("/delete/:id", deleteByID);
 
 module.exports = router;
 

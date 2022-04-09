@@ -44,13 +44,13 @@ app.use("/api", userRoute);
 }); */
 
 // delete the record
-app.delete("/api/delete/:id", (req, res) => {
+/* app.delete("/api/delete/:id", (req, res) => {
 	let sql = "DELETE FROM users WHERE id=" + req.params.id + "";
 	let query = conn.query(sql, (err, result) => {
 		if (err) throw err;
 		res.send(JSON.stringify({ status: 200, error: null, response: "Record deleted successfully" }));
 	});
-});
+}); */
 
 // update the Record
 app.put("/api/update/", (req, res) => {
