@@ -39,7 +39,7 @@ router.post("/create", upload.single('image'), createUser);
 router.get("/view", showUser);
 router.get("/view/:id", getByID);
 router.delete("/delete/:id", deleteByID);
-router.put("/update/:id", updateByID);
+router.put("/update/:id", upload.single('image'), updateByID);
 
 module.exports = router;
 
